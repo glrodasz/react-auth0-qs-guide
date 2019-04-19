@@ -244,3 +244,5 @@ export default initFontAwesome;
 **Checkpoint 1:** At this point you can start testing how it looks so far. To start the app, run `npm run start` from the terminal to start the application.
 
 Now go and access it at [http://localhost:3000](http://localhost:3000). You should see the welcome message and a footer.
+
+![Checkpoint 1](docs/checkpoint-1.png)
