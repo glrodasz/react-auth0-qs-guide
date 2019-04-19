@@ -49,10 +49,7 @@ class App extends Component {
   };
 
   handleLogoutClick = async event => {
-    event && event.preventDefault();
-    const { auth0 } = this.state;
 
-    auth0.logout({ returnTo: window.location.origin });
   };
 
   render() {
