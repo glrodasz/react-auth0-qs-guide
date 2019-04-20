@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Callback from "./views/Callback";
+import Profile from "./views/Profile";
 
 // auth0 config
 import config from "./auth_config";
@@ -51,7 +52,7 @@ class App extends Component {
   handleLogoutClick = async event => {
     event && event.preventDefault();
     const { auth0 } = this.state;
-  
+
     auth0.logout({ returnTo: window.location.origin });
   };
 
@@ -81,6 +82,7 @@ class App extends Component {
                   />
                   <Container className="mt-5">
                     <Route path="/" exact component={Home} />
+                    <Route path="/profile"  render={() => <Profile auth0={auth0} />} />
                   </Container>
                   <Footer />
                 </Fragment>
