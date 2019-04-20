@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 import createAuth0Client from "@auth0/auth0-spa-js";
 
+import PrivateRoute from "./components/PrivateRoute";
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -82,7 +83,7 @@ class App extends Component {
                   />
                   <Container className="mt-5">
                     <Route path="/" exact component={Home} />
-                    <Route path="/profile"  render={() => <Profile auth0={auth0} />} />
+                    <PrivateRoute path="/profile" auth0={auth0} component={Profile} />
                   </Container>
                   <Footer />
                 </Fragment>
